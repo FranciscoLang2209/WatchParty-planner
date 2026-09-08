@@ -1,0 +1,2084 @@
+# Generado por WatchParty Planner. Fuente editable; los comentarios se reemplazan al guardar.
+meta:
+  project: WatchParty
+  updated: 2026-09-08
+  real_repository: https://github.com/FranciscoLang2209/WatchParty
+  real_commit: 4f32cea36de42a6d675fd6d671f4b53c5894b0f6
+  reference_repository: https://github.com/Pedrodeforonda/WatchParty-App-Styled
+  reference_commit: c50ee60936b70868e165bf5e143a6b7f2acda868
+  tracker: https://multica.ai/watchparty/issues
+  tracker_parent: WAT-87
+  snapshot: Lectura manual de Multica; estados no sincronizados automáticamente.
+    WP-* son propuestas locales, no tickets remotos.
+  tracker_counts:
+    backlog: 1
+    todo: 4
+    in_progress: 3
+    review: 2
+    done: 39
+    blocked: 0
+    cancelled: 0
+  tracker_import_scope: 37 unidades de desarrollo y onboarding relevadas
+    individualmente; WAT-87 se conserva como épica coordinadora sin sumar
+    estimación. Otros 11 registros Done de gestión histórica no fueron
+    transcritos individualmente.
+  tracker_parent_url: https://multica.ai/watchparty/issues/WAT-87
+out_of_scope:
+  - Retransmisión de video, sincronización de streaming o derechos audiovisuales.
+  - Apuestas, pagos, suscripciones y monetización.
+  - "Aplicaciones nativas iOS/Android: MVP web responsive."
+  - "Salas privadas, mensajes directos, seguimiento, logros y notificaciones:
+    candidatos posteriores."
+  - Cobertura universal de ligas o tiempo real deportivo sin proveedor validado.
+epics:
+  - id: base
+    title: Base implementada
+    sprint: 1
+    description: Trabajo existente contrastado con main y Multica. Las fechas
+      históricas y horas no verificadas no se inventan.
+    moscow: must
+    features:
+      - id: WAT-77
+        title: Monorepo pnpm y calidad transversal
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: package.json. Multica: Done observado el 07/09/2026."
+        owner_id: nacho
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - package.json
+        ticket_refs:
+          - WAT-77
+        tracker_status: Done
+      - id: WAT-76
+        title: Backend Express y health check
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/api/src/app.ts. Multica: Done observado el
+          07/09/2026."
+        owner_id: nacho
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/src/app.ts
+        ticket_refs:
+          - WAT-76
+        tracker_status: Done
+      - id: WAT-79
+        title: Frontend React, Vite y Tailwind
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/package.json. Multica: Done observado el
+          07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/package.json
+        ticket_refs:
+          - WAT-79
+        tracker_status: Done
+      - id: WAT-74
+        title: Integración continua en GitHub Actions
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: .github/workflows/ci.yml. Multica: Done observado el
+          07/09/2026."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - .github/workflows/ci.yml
+        ticket_refs:
+          - WAT-74
+        tracker_status: Done
+      - id: WAT-75
+        title: Supabase CLI y stack local
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: supabase/config.toml. Multica: Done observado el
+          07/09/2026."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - supabase/config.toml
+        ticket_refs:
+          - WAT-75
+        tracker_status: Done
+      - id: WAT-78
+        title: Despliegue frontend en Vercel
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: README.md. Multica: Done observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - README.md
+        ticket_refs:
+          - WAT-78
+        tracker_status: Done
+      - id: WAT-97
+        title: Sesión Supabase y rutas protegidas
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/auth/AuthProvider.tsx. Multica: Done
+          observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/auth/AuthProvider.tsx
+        ticket_refs:
+          - WAT-97
+        tracker_status: Done
+      - id: WAT-89
+        title: Registro, login y logout con contraseña
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/features/auth/AuthForm.tsx. Multica: Done
+          observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/features/auth/AuthForm.tsx
+        ticket_refs:
+          - WAT-89
+        tracker_status: Done
+      - id: WAT-98
+        title: Home privada y componentes UI
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/features/home/HomePage.tsx. Multica: Done
+          observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/features/home/HomePage.tsx
+        ticket_refs:
+          - WAT-98
+        tracker_status: Done
+      - id: WAT-99
+        title: Header responsive y cambio de tema
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/components/layout/AppHeader.tsx. Multica:
+          Done observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/components/layout/AppHeader.tsx
+        ticket_refs:
+          - WAT-99
+        tracker_status: Done
+      - id: WAT-100
+        title: Navegación inferior móvil
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/components/layout/BottomNavigation.tsx.
+          Multica: Done observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/components/layout/BottomNavigation.tsx
+        ticket_refs:
+          - WAT-100
+        tracker_status: Done
+      - id: WAT-101
+        title: Skill de diseño WatchParty UI
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: .agents/skills/watchparty-ui/SKILL.md. Multica: Done
+          observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - .agents/skills/watchparty-ui/SKILL.md
+        ticket_refs:
+          - WAT-101
+        tracker_status: Done
+      - id: WAT-90
+        title: Configuración de entorno y CORS
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/api/src/config/env.ts. Multica: Done observado el
+          07/09/2026."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/src/config/env.ts
+        ticket_refs:
+          - WAT-90
+        tracker_status: Done
+      - id: WAT-91
+        title: Verificación de bearer tokens Supabase
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/api/src/middleware/require-authenticated-user.ts.
+          Multica: Done observado el 07/09/2026."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/src/middleware/require-authenticated-user.ts
+        ticket_refs:
+          - WAT-91
+        tracker_status: Done
+      - id: WAT-92
+        title: Modelo y catálogo temporal de partidos
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea:
+          apps/api/src/modules/matches/infrastructure/local-match-catalog.ts.
+          Multica: Done observado el 07/09/2026."
+        owner_id: nacho
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/src/modules/matches/infrastructure/local-match-catalog.ts
+        ticket_refs:
+          - WAT-92
+        tracker_status: Done
+      - id: WAT-94
+        title: Contrato de errores HTTP
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/api/src/middleware/error-handler.ts. Multica: Done
+          observado el 07/09/2026."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/src/middleware/error-handler.ts
+        ticket_refs:
+          - WAT-94
+        tracker_status: Done
+      - id: WAT-95
+        title: Listado autenticado GET /matches
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea:
+          apps/api/src/modules/matches/http/list-matches-handler.ts. Multica:
+          Done observado el 07/09/2026."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/src/modules/matches/http/list-matches-handler.ts
+        ticket_refs:
+          - WAT-95
+        tracker_status: Done
+      - id: WAT-104
+        title: Cliente frontend y formatos de partidos
+        estimate: 1
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/features/matches/api.ts. Multica: Done
+          observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/features/matches/api.ts
+        ticket_refs:
+          - WAT-104
+        tracker_status: Done
+      - id: WAT-110
+        title: Listado de partidos en tarjetas responsive
+        estimate: 2
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/features/home/HomePage.tsx. Multica: Done
+          observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/features/home/HomePage.tsx
+        ticket_refs:
+          - WAT-110
+        tracker_status: Done
+      - id: WAT-93
+        title: Detalle mínimo del partido
+        estimate: 1.5
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/web/src/features/matches/MatchDetailPage.tsx.
+          Multica: Done observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/web/src/features/matches/MatchDetailPage.tsx
+        ticket_refs:
+          - WAT-93
+        tracker_status: Done
+      - id: WAT-88
+        title: Smoke local de autenticación y partidos
+        estimate: null
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: apps/api/scripts/smoke-auth-matches.ts. Multica: Done
+          observado el 07/09/2026."
+        owner_id: nacho
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - apps/api/scripts/smoke-auth-matches.ts
+        ticket_refs:
+          - WAT-88
+        tracker_status: Done
+      - id: WAT-111
+        title: Runbook de recorrido y regresiones frontend
+        estimate: 0.5
+        depends_on: []
+        description: Incremento ya existente. Conservar y extender la implementación sin
+          recrear su infraestructura.
+        acceptance:
+          - Código presente en main y ticket Done en Multica.
+          - La validación histórica no sustituye una ejecución actual.
+        evidence: "main 4f32cea: docs/runbooks/match-frontend-validation.md. Multica:
+          Done observado el 07/09/2026."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - docs/runbooks/match-frontend-validation.md
+        ticket_refs:
+          - WAT-111
+        tracker_status: Done
+  - id: onboarding
+    title: Onboarding completado
+    sprint: 1
+    description: Evaluaciones y desafíos ya cerrados en Multica; sin horas
+      históricas verificadas.
+    moscow: must
+    features:
+      - id: WAT-81
+        title: Challenge técnico · Martina
+        estimate: null
+        depends_on: []
+        description: Actividad de incorporación cerrada en Multica.
+        acceptance:
+          - Conservar el registro histórico y sus materiales.
+        evidence: "Multica: Done observado el 07/09/2026; no implica entrega de
+          funcionalidad."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs:
+          - WAT-81
+      - id: WAT-82
+        title: Challenge técnico · Tomi
+        estimate: null
+        depends_on: []
+        description: Actividad de incorporación cerrada en Multica.
+        acceptance:
+          - Conservar el registro histórico y sus materiales.
+        evidence: "Multica: Done observado el 07/09/2026; no implica entrega de
+          funcionalidad."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs:
+          - WAT-82
+      - id: WAT-83
+        title: Challenge técnico · Ignacio
+        estimate: null
+        depends_on: []
+        description: Actividad de incorporación cerrada en Multica.
+        acceptance:
+          - Conservar el registro histórico y sus materiales.
+        evidence: "Multica: Done observado el 07/09/2026; no implica entrega de
+          funcionalidad."
+        owner_id: nacho
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs:
+          - WAT-83
+      - id: WAT-84
+        title: Evaluación · Martina
+        estimate: null
+        depends_on: []
+        description: Actividad de incorporación cerrada en Multica.
+        acceptance:
+          - Conservar el registro histórico y sus materiales.
+        evidence: "Multica: Done observado el 07/09/2026; no implica entrega de
+          funcionalidad."
+        owner_id: martina
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs:
+          - WAT-84
+      - id: WAT-85
+        title: Evaluación · Ignacio
+        estimate: null
+        depends_on: []
+        description: Actividad de incorporación cerrada en Multica.
+        acceptance:
+          - Conservar el registro histórico y sus materiales.
+        evidence: "Multica: Done observado el 07/09/2026; no implica entrega de
+          funcionalidad."
+        owner_id: nacho
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs:
+          - WAT-85
+      - id: WAT-86
+        title: Evaluación · Tomi
+        estimate: null
+        depends_on: []
+        description: Actividad de incorporación cerrada en Multica.
+        acceptance:
+          - Conservar el registro histórico y sus materiales.
+        evidence: "Multica: Done observado el 07/09/2026; no implica entrega de
+          funcionalidad."
+        owner_id: tomi
+        status: done
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs:
+          - WAT-86
+  - id: sports
+    title: Cerrar integración deportiva
+    sprint: 2
+    description: Continuar WAT-87 y sus tickets existentes. No duplicar proveedor,
+      migraciones ni adaptadores ya en curso.
+    moscow: must
+    features:
+      - id: WAT-102
+        title: Validar cobertura de API-Football Free
+        estimate: null
+        depends_on: []
+        description: Verificar competición, temporada, ventana y cuota realmente
+          accesibles antes de comprometer datos en vivo.
+        acceptance:
+          - Registrar cobertura, cuota y límites sin secretos.
+          - Si no hay cobertura reciente, explicitar el fallback y acordar el
+            recorte.
+        evidence: "Multica: In Progress. PR #29 abierta, SHA 2368ce2, leída 08/09/2026:
+          documenta consulta real del 07/09, rechazo de temporada 2026 y 28
+          fixtures históricos de 2023. Evidencia del autor, no reejecutada por
+          este planificador."
+        owner_id: tomi
+        status: in_progress
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - https://github.com/FranciscoLang2209/WatchParty/pull/29
+          - docs/integrations/api-football-coverage.md
+        ticket_refs:
+          - WAT-102
+        tracker_status: In Progress
+      - id: WAT-103
+        title: Esquema y permisos de datos deportivos
+        estimate: 1.5
+        depends_on:
+          - WAT-75
+        description: "Revisar y completar la PR #25 existente: esquema mínimo de
+          equipos, partidos y estado de sincronización, RLS y funciones de
+          lease. No duplicar migraciones; no crear una tabla de competiciones
+          sin necesidad."
+        acceptance:
+          - Reconstruir desde cero en Supabase local.
+          - Lectura y escritura respetan permisos; importación idempotente.
+        evidence: "Multica: In Review. PR #25 abierta, SHA 934866b: tablas teams,
+          matches y provider_sync_state, seed y funciones de lease; no integrada
+          en main relevado."
+        owner_id: nacho
+        status: review
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - https://github.com/FranciscoLang2209/WatchParty/pull/25
+          - supabase/migrations/20260904222112_sports_data_schema.sql
+        ticket_refs:
+          - WAT-103
+        tracker_status: In Review
+      - id: WAT-105
+        title: Cliente de fixtures y normalización
+        estimate: null
+        depends_on:
+          - WAT-102
+          - WAT-92
+        description: Implementar el adaptador de API-Football con normalización al
+          modelo canónico existente.
+        acceptance:
+          - Mapear estados, equipos, IDs y fechas consistentemente.
+          - Probar timeout, cuota, páginas vacías y respuesta incompleta.
+        evidence: "Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea;
+          puede existir en rama/PR."
+        owner_id: tomi
+        status: backlog
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - apps/api/src/modules/matches/README.md
+        ticket_refs:
+          - WAT-105
+        tracker_status: Todo
+      - id: WAT-106
+        title: Persistencia y catálogo Supabase
+        estimate: 1.5
+        depends_on:
+          - WAT-103
+          - WAT-92
+        description: Componer la API con el catálogo persistente manteniendo los
+          consumidores del puerto MatchCatalog.
+        acceptance:
+          - GET /matches y detalle leen datos persistidos.
+          - Reinicio no elimina partidos; contratos HTTP no cambian.
+        evidence: "Multica observado 07/09/2026: In Progress. No encontrado en main
+          4f32cea; puede existir en rama/PR."
+        owner_id: nacho
+        status: in_progress
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - apps/api/src/modules/matches/README.md
+        ticket_refs:
+          - WAT-106
+        tracker_status: In Progress
+      - id: WAT-107
+        title: Importación manual con control de cuota
+        estimate: null
+        depends_on:
+          - WAT-105
+          - WAT-103
+        description: Importar una ventana acotada con bloqueo de concurrencia y
+          presupuesto de llamadas.
+        acceptance:
+          - Repetir la importación no duplica fixtures.
+          - Salir con causa legible ante cuota insuficiente; no exponer claves.
+        evidence: "Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea;
+          puede existir en rama/PR."
+        owner_id: tomi
+        status: backlog
+        starts: 2026-09-14
+        ends: 2026-09-20
+        prototype:
+          - apps/api/src/modules/matches/README.md
+        ticket_refs:
+          - WAT-107
+        tracker_status: Todo
+      - id: WAT-108
+        title: Validar y documentar integración deportiva
+        estimate: null
+        depends_on:
+          - WAT-107
+        description: Ejecutar una sincronización mínima controlada y registrar el
+          runbook reproducible.
+        acceptance:
+          - Evidenciar registros persistidos y consumo de cuota.
+          - No reconsultar el proveedor desde cada navegador.
+        evidence: "Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea;
+          puede existir en rama/PR."
+        owner_id: tomi
+        status: backlog
+        starts: 2026-09-14
+        ends: 2026-09-20
+        prototype:
+          - apps/api/src/modules/matches/README.md
+        ticket_refs:
+          - WAT-108
+        tracker_status: Todo
+      - id: WAT-109
+        title: Validar persistencia e integración backend
+        estimate: 1
+        depends_on:
+          - WAT-106
+          - WAT-107
+        description: Verificar migración, permisos, importación y lectura autenticada en
+          entorno local desechable.
+        acceptance:
+          - Pruebas con usuario autorizado y no autorizado.
+          - Datos conservados después del reinicio y errores HTTP estables.
+        evidence: "Multica observado 07/09/2026: In Progress. No encontrado en main
+          4f32cea; puede existir en rama/PR."
+        owner_id: nacho
+        status: in_progress
+        starts: 2026-09-14
+        ends: 2026-09-20
+        prototype:
+          - apps/api/src/modules/matches/README.md
+        ticket_refs:
+          - WAT-109
+        tracker_status: In Progress
+      - id: WAT-96
+        title: Completar pruebas HTTP y cerrar revisión de detalle
+        estimate: 1
+        depends_on:
+          - WAT-95
+        description: "El endpoint existe en main. La PR #26 agrega pruebas HTTP
+          específicas; revisar e integrar esta cobertura, sin recrear el
+          handler."
+        acceptance:
+          - Contrastar PR integrada con criterios de WAT-96.
+          - Registrar la evidencia faltante, sin reimplementar el endpoint.
+        evidence: "Multica: In Review. PR #26 abierta, SHA ac43ac9:
+          get-match.http.test.ts verifica 200, variantes 401, 404 y 500. El
+          handler ya está en main."
+        owner_id: nacho
+        status: review
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - https://github.com/FranciscoLang2209/WatchParty/pull/26
+          - apps/api/src/modules/matches/http/get-match.http.test.ts
+        ticket_refs:
+          - WAT-96
+        tracker_status: In Review
+      - id: WAT-112
+        title: Reconciliar arranque unificado pnpm dev
+        estimate: 0.25
+        depends_on:
+          - WAT-75
+        description: El arranque unificado ya está en main; el tablero remoto aún figura
+          Todo. Confirmar estado real y cerrar discrepancia.
+        acceptance:
+          - Ejecutar el arranque según README en entorno disponible.
+          - Actualizar estado remoto solo tras revisar evidencia.
+        evidence: "Multica observado 07/09/2026: Todo. Código presente en main;
+          discrepancia pendiente."
+        owner_id: martina
+        status: backlog
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - apps/api/src/modules/matches/README.md
+        ticket_refs:
+          - WAT-112
+        tracker_status: Todo
+  - id: identity
+    title: Cuenta y perfil mínimo
+    sprint: 2
+    description: Completar los flujos de identidad que la base de autenticación
+      todavía no cubre.
+    moscow: must
+    features:
+      - id: WP-001
+        title: Definir el corte de MVP y reglas del producto
+        estimate: 2
+        depends_on: []
+        description: Acordar salas públicas por partido, cuándo puede calificarse, qué
+          cuenta como visto y cobertura deportiva. Congelar alcance esencial
+          contra capacidad.
+        acceptance:
+          - Dejar decisiones, exclusiones y dueños en un documento breve.
+          - Aprobar el recorte antes del 14/09; cualquier nueva historia
+            reemplaza trabajo equivalente.
+          - "Decidir si la demo usa fixtures históricos etiquetados o si se
+            aprueba cobertura de temporada actual; API-Football Free no puede
+            sostener la promesa vigente según PR #29."
+        evidence: Propuesta de planificación. La imagen es orientación, no calendario
+          contractual.
+        owner_id: francisco
+        status: todo
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-002
+        title: Completar recuperación de contraseña
+        estimate: 3
+        depends_on:
+          - WAT-89
+        description: El envío de email existe; agregar callback de recuperación y
+          formulario para guardar contraseña nueva.
+        acceptance:
+          - Un enlace válido permite cambiar contraseña y volver al login.
+          - Enlace vencido y contraseña inválida muestran error recuperable.
+        evidence: ForgotPasswordPage envía resetPasswordForEmail; el router no define
+          una pantalla de nueva contraseña.
+        owner_id: martina
+        status: todo
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-003
+        title: Crear y editar perfil persistente
+        estimate: 4
+        depends_on:
+          - WAT-89
+          - WAT-103
+        description: Como usuario quiero guardar nombre visible y biografía corta para
+          identificarme en la comunidad.
+        acceptance:
+          - Perfil ligado al auth.uid con permisos de propietario.
+          - Editar, recargar y abrir sesión nuevamente conserva los campos; otro
+            usuario no puede modificarlos.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-14
+        ends: 2026-09-20
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-004
+        title: Elegir y cambiar equipo favorito
+        estimate: 3
+        depends_on:
+          - WP-003
+          - WAT-106
+        description: Como usuario quiero seleccionar un equipo del catálogo y recuperar
+          mi preferencia al iniciar sesión.
+        acceptance:
+          - Permite elegir, cambiar y quitar el equipo favorito.
+          - La Home contempla usuario sin favorito y equipo sin próximo partido.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-14
+        ends: 2026-09-20
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-005
+        title: Validar registro y confirmación por email
+        estimate: 2
+        depends_on:
+          - WAT-89
+        description: Verificar alta con confirmación activada y redirecciones reales del
+          entorno de entrega.
+        acceptance:
+          - Sin sesión tras registrarse se explica el siguiente paso.
+          - Enlace vencido, sesión expirada y logout tienen recorrido
+            recuperable.
+        evidence: El código maneja Auth; confirmar experiencia integrada pendiente del
+          runbook.
+        owner_id: null
+        status: todo
+        starts: 2026-09-07
+        ends: 2026-09-13
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+  - id: rooms
+    title: Salas y conversación en vivo
+    sprint: 3
+    description: Primer incremento social utilizable por dos personas, con datos
+      persistidos y permisos.
+    moscow: must
+    features:
+      - id: WP-006
+        title: Entrar a la sala pública de un partido
+        estimate: 5
+        depends_on:
+          - WP-003
+          - WAT-106
+        description: Crear una sala canónica por partido y permitir entrar desde el
+          detalle autenticado.
+        acceptance:
+          - Dos usuarios del mismo partido llegan a la misma sala.
+          - Partido inexistente y usuario sin sesión se rechazan; no crear salas
+            duplicadas.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-21
+        ends: 2026-09-27
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-007
+        title: Explorar el directorio de salas
+        estimate: 3
+        depends_on:
+          - WP-006
+        description: Activar /rooms con partidos en vivo y próximos; cada tarjeta abre
+          su partido real.
+        acceptance:
+          - Equipos, horario y estado provienen del catálogo.
+          - Carga, vacío, error y acceso móvil funcionan.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-21
+        ends: 2026-09-27
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-008
+        title: Enviar y recuperar comentarios persistentes
+        estimate: 5
+        depends_on:
+          - WP-006
+        description: Publicar comentarios de texto en la sala con identidad del servidor
+          y límite de 180 caracteres.
+        acceptance:
+          - Rechazar texto vacío, exceso y autor suplantado; renderizar como
+            texto seguro.
+          - El comentario reaparece tras recargar y no se duplica al reintentar.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-21
+        ends: 2026-09-27
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-009
+        title: Recibir comentarios entre dos sesiones
+        estimate: 5
+        depends_on:
+          - WP-008
+        description: Agregar canal de tiempo real autorizado reutilizando el stack
+          existente. Seleccionar Supabase Realtime o WebSocket tras validar
+          permisos. El recorrido REST existente sigue pasando por Node;
+          cualquier canal Realtime directo requiere una decisión de arquitectura
+          explícita y validación de permisos.
+        acceptance:
+          - Dos navegadores reciben el mismo mensaje sin refrescar.
+          - Solo se reciben eventos de la sala elegida; se liberan suscripciones
+            al salir.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-21
+        ends: 2026-09-27
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-010
+        title: Recuperar conversación al reconectar
+        estimate: 3
+        depends_on:
+          - WP-009
+        description: Mostrar desconexión y recuperar mensajes faltantes al restablecer
+          el canal.
+        acceptance:
+          - No duplicar mensajes propios ni omitir el intervalo offline.
+          - El usuario puede reintentar y conservar el borrador.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-28
+        ends: 2026-10-04
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-011
+        title: Cargar historial anterior del chat
+        estimate: 2
+        depends_on:
+          - WP-008
+        description: Paginar por cursor en orden estable sin cargar toda la conversación.
+        acceptance:
+          - Primera carga acotada; cargar anteriores mantiene el scroll.
+          - Empates de timestamp y nuevos mensajes no duplican filas.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-28
+        ends: 2026-10-04
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-012
+        title: Reaccionar a un comentario
+        estimate: 3
+        depends_on:
+          - WP-009
+        description: Agregar una reacción simple por usuario y comentario, reversible.
+        acceptance:
+          - El conteo cambia para ambos usuarios.
+          - Restricción única impide dobles reacciones y el autor no se toma del
+            cliente.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-28
+        ends: 2026-10-04
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-013
+        title: Moderar comentarios y limitar abuso
+        estimate: 4
+        depends_on:
+          - WP-008
+        description: Permitir reportar un comentario y ocultarlo con un rol moderador
+          comprobado en servidor. Limitar envíos repetidos.
+        acceptance:
+          - Usuarios comunes no pueden moderar a terceros.
+          - Rate limit y validación son del servidor; los errores no borran el
+            borrador.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-28
+        ends: 2026-10-04
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-014
+        title: Mostrar presencia sin contar duplicados
+        estimate: 3
+        depends_on:
+          - WP-009
+        description: Mostrar participantes únicos de la sala con desconexión y pestañas
+          duplicadas contempladas.
+        acceptance:
+          - Una persona con dos pestañas cuenta una vez.
+          - No presentar el número ficticio del mockup como dato real.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+        moscow: should
+      - id: WP-015
+        title: Destacar la sala del equipo favorito
+        estimate: 2
+        depends_on:
+          - WP-004
+          - WP-007
+        description: Completar la tarjeta principal de Home con el partido relevante del
+          equipo elegido.
+        acceptance:
+          - Abre la sala correcta, con horario y estado actuales.
+          - Sin partido o favorito muestra alternativa útil.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-28
+        ends: 2026-10-04
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+  - id: reviews
+    title: Historial y calificaciones
+    sprint: 3
+    description: Registrar lo visto, calificar y recuperar la opinión del usuario.
+    moscow: must
+    features:
+      - id: WP-016
+        title: Marcar un partido como visto y deshacer
+        estimate: 3
+        depends_on:
+          - WP-003
+          - WAT-106
+        description: Guardar la relación única usuario–partido visto con una acción
+          explícita.
+        acceptance:
+          - Repetir la acción no duplica el registro.
+          - Solo el dueño puede eliminarlo; no registrar automáticamente por
+            abrir una sala.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-09-28
+        ends: 2026-10-04
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-017
+        title: Consultar historial personal paginado
+        estimate: 3
+        depends_on:
+          - WP-016
+        description: Activar /profile con partidos vistos, fecha, resultado y navegación
+          al detalle.
+        acceptance:
+          - El historial persiste entre sesiones y está ordenado.
+          - Estado vacío y paginación conservan coherencia.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-05
+        ends: 2026-10-11
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-018
+        title: Calificar un partido y editar la nota
+        estimate: 4
+        depends_on:
+          - WP-016
+        description: Guardar una calificación propia de 1 a 5 según la regla de cierre
+          aprobada.
+        acceptance:
+          - Una nota por usuario/partido; edición reemplaza la anterior.
+          - Rango y elegibilidad se validan en servidor, incluidos valores
+            decimales inválidos.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-05
+        ends: 2026-10-11
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-019
+        title: Publicar una reseña con la calificación
+        estimate: 3
+        depends_on:
+          - WP-018
+        description: Adjuntar una opinión breve, editable y eliminable por su autor.
+        acceptance:
+          - Texto validado y renderizado sin HTML ejecutable.
+          - Eliminar una reseña aplica la política acordada de historial y
+            agregados.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-05
+        ends: 2026-10-11
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-020
+        title: Mostrar promedio y cantidad de votos
+        estimate: 2
+        depends_on:
+          - WP-018
+        description: Calcular resultados de comunidad sin confundir ausencia de votos
+          con cero estrellas.
+        acceptance:
+          - Edición de voto actualiza promedio sin sumar un votante.
+          - Se ve número de votos y estado sin calificaciones.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-05
+        ends: 2026-10-11
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-021
+        title: Calificar jugadores del partido
+        estimate: 5
+        depends_on:
+          - WP-018
+          - WP-023
+        description: Permitir notas opcionales de 1 a 10 para jugadores realmente
+          vinculados al partido.
+        acceptance:
+          - No admite jugadores de otro encuentro ni notas fuera de rango.
+          - Cambiar nota conserva unicidad y ausencia de plantel se comunica.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+        moscow: should
+  - id: statistics
+    title: Estadísticas y descubrimiento
+    sprint: 3
+    description: Datos básicos reales; métricas avanzadas sujetas a cobertura
+      verificada del proveedor.
+    moscow: must
+    features:
+      - id: WP-022
+        title: Mostrar marcador, estado y actualización
+        estimate: 3
+        depends_on:
+          - WAT-108
+          - WAT-109
+        description: Exponer marcador y última actualización en sala y detalle. La
+          frescura es explícita.
+        acceptance:
+          - UTC se muestra en hora local; aplazados/cancelados no figuran en
+            vivo.
+          - Si el origen es histórico o está desactualizado se ve una etiqueta
+            honesta.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-05
+        ends: 2026-10-11
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-023
+        title: Validar y obtener planteles del encuentro
+        estimate: 3
+        depends_on:
+          - WAT-102
+        description: Verificar cobertura de alineaciones y guardar jugadores ligados al
+          fixture.
+        acceptance:
+          - Documentar disponibilidad y cuota antes de implementar.
+          - No inventar jugadores; presentar faltantes y fixture sin plantel.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+        moscow: should
+      - id: WP-024
+        title: Mostrar estadísticas básicas del partido
+        estimate: 4
+        depends_on:
+          - WP-022
+        description: Presentar posesión, remates, tiros al arco, córners y faltas
+          disponibles. Validar primero la cobertura y cuota de este endpoint, ya
+          que WAT-102 verifica fixtures pero no estadísticas.
+        acceptance:
+          - No usar ceros para datos ausentes.
+          - Barras normalizadas al total comparado; porcentajes y unidades
+            correctos.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-12
+        ends: 2026-10-18
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-025
+        title: Buscar partidos y equipos
+        estimate: 3
+        depends_on:
+          - WAT-106
+        description: Activar /search con consulta al catálogo, filtro de tipo y
+          navegación a resultados.
+        acceptance:
+          - Búsqueda vacía, sin resultados y error tienen estados propios.
+          - Limitar tamaño y paginar consultas; no mostrar resultados de una
+            búsqueda vieja.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-05
+        ends: 2026-10-11
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-026
+        title: Resumen de estadísticas personales
+        estimate: 2
+        depends_on:
+          - WP-017
+          - WP-018
+          - WP-008
+        description: Mostrar conteos reales de partidos vistos, calificaciones y
+          comentarios propios.
+        acceptance:
+          - Los números coinciden con registros persistidos.
+          - No reutilizar nivel, racha ni cantidades hardcodeadas del mockup.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-12
+        ends: 2026-10-18
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-027
+        title: Ver ficha básica de equipo
+        estimate: 3
+        depends_on:
+          - WP-025
+        description: Mostrar equipo, próximos partidos y resultados cubiertos por el
+          catálogo.
+        acceptance:
+          - Cada resultado abre su partido.
+          - Equipo inexistente y datos parciales se comunican.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+        moscow: should
+      - id: WP-028
+        title: Ver ficha básica de jugador
+        estimate: 3
+        depends_on:
+          - WP-023
+        description: Mostrar identidad, equipo y participaciones disponibles sin
+          estadísticas inventadas.
+        acceptance:
+          - Ficha enlazada desde el partido real.
+          - Datos faltantes no se representan como desempeño cero.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+        moscow: should
+  - id: social
+    title: Perfil y feed social
+    sprint: 3
+    description: Feed básico cronológico. Seguir personas, logros y recomendaciones
+      quedan fuera del corte inicial.
+    moscow: must
+    features:
+      - id: WP-029
+        title: Ver un feed cronológico de actividad
+        estimate: 4
+        depends_on:
+          - WP-019
+          - WP-017
+        description: Como usuario quiero ver reseñas públicas recientes vinculadas a su
+          partido.
+        acceptance:
+          - Solo se muestra actividad que la política de privacidad permite
+            publicar.
+          - Orden estable y paginación; actividad eliminada deja de aparecer.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-12
+        ends: 2026-10-18
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-030
+        title: Abrir un perfil público acotado
+        estimate: 3
+        depends_on:
+          - WP-003
+          - WP-029
+        description: Mostrar nombre, biografía y reseñas públicas sin email ni
+          información privada.
+        acceptance:
+          - Perfil inexistente tiene respuesta clara.
+          - El API no expone atributos privados y respeta visibilidad del
+            historial.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: 2026-10-12
+        ends: 2026-10-18
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-031
+        title: Compartir un enlace a partido o reseña
+        estimate: 2
+        depends_on:
+          - WP-029
+        description: Usar compartir nativo o copiar enlace canónico con fallback.
+        acceptance:
+          - El enlace abre el mismo recurso tras login.
+          - Cancelar compartir no informa error; copiar informa éxito o fallo.
+        evidence: Propuesta derivada del mockup y del alcance preliminar; no
+          implementada en main.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+        moscow: should
+  - id: quality
+    title: Validación, seguridad y release
+    sprint: 4
+    description: MVP comprobado con dos sesiones, carga controlada y entorno
+      accesible antes de la defensa.
+    moscow: must
+    features:
+      - id: WP-032
+        title: Completar la matriz responsive y teclado
+        estimate: 3
+        depends_on:
+          - WP-007
+          - WP-017
+          - WP-025
+        description: Cerrar pendientes del runbook y validar recorridos nuevos a 320,
+          390, 768 y 1440 px en ambos temas.
+        acceptance:
+          - No hay contenido cubierto por navegación ni scroll accidental.
+          - Foco, etiquetas, contraste y anuncios de error verificados; guardar
+            evidencia.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-19
+        ends: 2026-10-25
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-033
+        title: Validar aislamiento de usuarios y salas
+        estimate: 4
+        depends_on:
+          - WP-013
+          - WP-018
+          - WP-030
+        description: Probar acceso directo a recursos de otros usuarios, suscripciones y
+          controles de moderación.
+        acceptance:
+          - Usuario A no edita perfil, nota o historial de B.
+          - Sin token/rol devuelve rechazo consistente y no filtra datos ni
+            secretos.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-19
+        ends: 2026-10-25
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-034
+        title: Probar el recorrido social de punta a punta
+        estimate: 4
+        depends_on:
+          - WP-010
+          - WP-012
+          - WP-020
+          - WP-029
+        description: "Con dos sesiones: registrar, entrar a sala, conversar, reaccionar,
+          guardar visto, calificar y consultar historial/feed."
+        acceptance:
+          - Dejar un chequeo repetible y evidencia sobre el mismo commit.
+          - Reintentos, refresh, sesión vencida y desconexión no pierden ni
+            duplican información.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-19
+        ends: 2026-10-25
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-035
+        title: Medir concurrencia controlada
+        estimate: 3
+        depends_on:
+          - WP-009
+          - WP-010
+        description: Acordar objetivo de piloto y medir 20 conexiones simultáneas con
+          mensajes, reconexión y límites de cuota.
+        acceptance:
+          - "Objetivo propuesto a validar: entrega p95 menor de 2 s con 20
+            conexiones."
+          - Reporte de carga, errores y límites; no prometer los 2.847 usuarios
+            ficticios del mockup.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-19
+        ends: 2026-10-25
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-036
+        title: Configurar entorno de prueba integrado
+        estimate: 4
+        depends_on:
+          - WAT-109
+          - WP-009
+        description: Preparar web, API y Supabase remoto o infraestructura acordada con
+          secretos fuera del repositorio.
+        acceptance:
+          - Login, REST y tiempo real funcionan desde la URL de QA.
+          - Documentar CORS, HTTPS, redirects, migraciones y separación de datos
+            de prueba.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-19
+        ends: 2026-10-25
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-037
+        title: Agregar diagnóstico básico y recuperación
+        estimate: 3
+        depends_on:
+          - WP-036
+        description: Registrar errores con correlación sin tokens ni mensajes privados;
+          comprobar health y respaldo/restauración.
+        acceptance:
+          - Una caída se identifica con pasos reproducibles.
+          - Restaurar datos de prueba y documentar límites operativos.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-26
+        ends: 2026-11-01
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-038
+        title: Aceptación del MVP con usuarios de prueba
+        estimate: 3
+        depends_on:
+          - WP-032
+          - WP-033
+          - WP-034
+          - WP-035
+          - WP-036
+        description: Ejecutar checklist con participantes y priorizar defectos que
+          impidan el recorrido esencial.
+        acceptance:
+          - Registrar resultados, bugs y decisión go/no-go.
+          - No aceptar incidentes críticos abiertos; pendientes menores tienen
+            responsable.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-26
+        ends: 2026-11-01
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-039
+        title: Publicar versión candidata y rollback
+        estimate: 3
+        depends_on:
+          - WP-038
+          - WP-037
+        description: Etiquetar y desplegar un commit validado; conservar versión
+          anterior y procedimiento de rollback.
+        acceptance:
+          - URL accesible; smoke postdeploy con dos cuentas de prueba.
+          - Rollback ensayado y notas de versión con limitaciones reales.
+        evidence: Propuesta para completar validación y entrega. El README solo
+          documenta despliegue frontend; el runbook mantiene validación visual
+          pendiente.
+        owner_id: null
+        status: todo
+        starts: 2026-10-26
+        ends: 2026-11-01
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+  - id: delivery
+    title: Entrega final · 12 de noviembre
+    sprint: 5
+    description: Documentación, evidencia y defensa. No sumar funcionalidad durante
+      el cierre.
+    moscow: must
+    features:
+      - id: WP-040
+        title: Documentar instalación, arquitectura y decisiones
+        estimate: 3
+        depends_on:
+          - WP-036
+        description: Actualizar README obsoleto, modelo de datos, contratos y decisiones
+          realmente implementadas.
+        acceptance:
+          - Una persona nueva puede levantar el proyecto siguiendo los pasos.
+          - El documento distingue implementación, limitaciones y trabajo futuro.
+        evidence: "Fecha final confirmada por el usuario: 12/11/2026. Actividad
+          propuesta."
+        owner_id: null
+        status: todo
+        starts: 2026-11-02
+        ends: 2026-11-08
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-041
+        title: Preparar demo y datos reproducibles
+        estimate: 3
+        depends_on:
+          - WP-039
+        description: "Preparar guion: dos personas en sala, comentario, reacción,
+          calificación, historial y feed; respaldar con grabación."
+        acceptance:
+          - Seed reproducible sin datos personales ni secretos.
+          - Existe fallback ante caída de Internet o proveedor.
+        evidence: "Fecha final confirmada por el usuario: 12/11/2026. Actividad
+          propuesta."
+        owner_id: null
+        status: todo
+        starts: 2026-11-02
+        ends: 2026-11-08
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-042
+        title: Consolidar evidencias y reporte final
+        estimate: 2
+        depends_on:
+          - WP-038
+        description: Reunir pruebas, trazabilidad de requisitos, métricas reales y
+          riesgos residuales.
+        acceptance:
+          - Cada requisito esencial tiene evidencia o limitación explícita.
+          - Separar cantidades medidas de cifras simuladas del mockup.
+        evidence: "Fecha final confirmada por el usuario: 12/11/2026. Actividad
+          propuesta."
+        owner_id: null
+        status: todo
+        starts: 2026-11-02
+        ends: 2026-11-08
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-043
+        title: Ensayar defensa y completar entrega
+        estimate: 2
+        depends_on:
+          - WP-040
+          - WP-041
+          - WP-042
+        description: Ensayar presentación, respuestas y acceso al repositorio/URL para
+          la entrega del 12/11/2026.
+        acceptance:
+          - Demo cronometrada y materiales revisados por el equipo.
+          - Checklist final cerrado antes del 12/11, con enlaces vigentes.
+        evidence: "Fecha final confirmada por el usuario: 12/11/2026. Actividad
+          propuesta."
+        owner_id: null
+        status: todo
+        starts: 2026-11-02
+        ends: 2026-11-08
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+  - id: fixes-2
+    title: Reserva de correcciones · Sprint 2
+    sprint: 2
+    description: Capacidad explícita para bugs y arrastre; no duplicar con un
+      porcentaje de buffer.
+    moscow: must
+    features:
+      - id: FIX-2
+        title: Resolver defectos y absorber arrastre
+        estimate: 3
+        depends_on: []
+        description: Reserva explícita que se descompone en defectos reales al aparecer.
+          No representa funcionalidad terminada.
+        acceptance:
+          - Consumir solo contra bugs o pendientes identificados.
+          - Lo no utilizado se libera; no adelantar Could hasta cerrar los Must.
+        evidence: Reserva propuesta, no incidencia observada.
+        owner_id: null
+        status: todo
+        starts: 2026-09-14
+        ends: 2026-09-20
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+    fixes: true
+  - id: fixes-3
+    title: Reserva de correcciones · Sprint 3
+    sprint: 3
+    description: Capacidad explícita para bugs y arrastre; no duplicar con un
+      porcentaje de buffer.
+    moscow: must
+    features:
+      - id: FIX-3
+        title: Resolver defectos y absorber arrastre
+        estimate: 5
+        depends_on: []
+        description: Reserva explícita que se descompone en defectos reales al aparecer.
+          No representa funcionalidad terminada.
+        acceptance:
+          - Consumir solo contra bugs o pendientes identificados.
+          - Lo no utilizado se libera; no adelantar Could hasta cerrar los Must.
+        evidence: Reserva propuesta, no incidencia observada.
+        owner_id: null
+        status: todo
+        starts: 2026-10-12
+        ends: 2026-10-18
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+    fixes: true
+  - id: fixes-4
+    title: Reserva de correcciones · Sprint 4
+    sprint: 4
+    description: Capacidad explícita para bugs y arrastre; no duplicar con un
+      porcentaje de buffer.
+    moscow: must
+    features:
+      - id: FIX-4
+        title: Resolver defectos y absorber arrastre
+        estimate: 4
+        depends_on: []
+        description: Reserva explícita que se descompone en defectos reales al aparecer.
+          No representa funcionalidad terminada.
+        acceptance:
+          - Consumir solo contra bugs o pendientes identificados.
+          - Lo no utilizado se libera; no adelantar Could hasta cerrar los Must.
+        evidence: Reserva propuesta, no incidencia observada.
+        owner_id: null
+        status: todo
+        starts: 2026-10-26
+        ends: 2026-11-01
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+    fixes: true
+  - id: fixes-5
+    title: Reserva de correcciones · Sprint 5
+    sprint: 5
+    description: Capacidad explícita para bugs y arrastre; no duplicar con un
+      porcentaje de buffer.
+    moscow: must
+    features:
+      - id: FIX-5
+        title: Resolver defectos y absorber arrastre
+        estimate: 2
+        depends_on: []
+        description: Reserva explícita que se descompone en defectos reales al aparecer.
+          No representa funcionalidad terminada.
+        acceptance:
+          - Consumir solo contra bugs o pendientes identificados.
+          - Lo no utilizado se libera; no adelantar Could hasta cerrar los Must.
+        evidence: Reserva propuesta, no incidencia observada.
+        owner_id: null
+        status: todo
+        starts: 2026-11-09
+        ends: 2026-11-12
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+    fixes: true
+  - id: later
+    title: Después del MVP
+    sprint: 6
+    description: Opciones visibles en el mockup o derivadas de evolución del
+      producto. Sin compromiso de entrega al 12/11.
+    moscow: could
+    features:
+      - id: WP-044
+        title: Seguir y dejar de seguir personas
+        estimate: 4
+        depends_on:
+          - WP-030
+        description: Relación social persistente para construir una red de usuarios.
+        acceptance:
+          - No se permite seguirse a uno mismo ni duplicar relaciones.
+          - Bloqueos y privacidad acordados antes de publicar.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-045
+        title: Feed de personas seguidas
+        estimate: 3
+        depends_on:
+          - WP-044
+          - WP-029
+        description: Habilitar la pestaña Siguiendo usando relaciones reales.
+        acceptance:
+          - El feed solo incluye personas seguidas.
+          - Cambios de relación se reflejan y hay estado vacío útil.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-046
+        title: Reaccionar y comentar en reseñas
+        estimate: 4
+        depends_on:
+          - WP-029
+          - WP-013
+        description: Dar comportamiento real a las acciones de interacción del feed.
+        acceptance:
+          - Persistencia y unicidad de reacciones.
+          - Comentarios moderables con límites y permisos.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-047
+        title: Responder a mensajes con contexto
+        estimate: 3
+        depends_on:
+          - WP-008
+        description: Implementar respuesta a un comentario sin crear hilos ilimitados.
+        acceptance:
+          - La respuesta referencia un mensaje de la misma sala.
+          - Mensaje eliminado se representa sin romper la conversación.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-048
+        title: Buscar personas de la comunidad
+        estimate: 3
+        depends_on:
+          - WP-030
+          - WP-025
+        description: Ampliar búsqueda unificada a perfiles públicos.
+        acceptance:
+          - Solo se indexan campos públicos.
+          - Paginación, permisos y no resultados funcionan.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-049
+        title: Subir avatar de perfil
+        estimate: 3
+        depends_on:
+          - WP-003
+        description: Permitir imágenes de perfil con tamaño y tipo acotados.
+        acceptance:
+          - Validar archivo en servidor y controlar acceso al storage.
+          - Reemplazo y borrado no dejan archivos huérfanos.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-050
+        title: Logros, niveles y rachas
+        estimate: 5
+        depends_on:
+          - WP-026
+        description: Definir reglas antes de implementar incentivos; el mockup tiene
+          valores inconsistentes.
+        acceptance:
+          - Reglas de conteo documentadas e idempotentes.
+          - Zona horaria y borrados no generan logros falsos.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-051
+        title: Notificaciones dentro de la aplicación
+        estimate: 4
+        depends_on:
+          - WP-044
+          - WP-046
+        description: Dar funcionalidad al icono del mockup para eventos concretos.
+        acceptance:
+          - Solo eventos del destinatario y estado leído persistente.
+          - No enviar push/email sin preferencias explícitas.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-052
+        title: Avisos de próximos partidos
+        estimate: 4
+        depends_on:
+          - WP-004
+        description: Recordatorios opcionales con preferencias de canal.
+        acceptance:
+          - Consentimiento y desactivación funcionan.
+          - No duplicar notificaciones al reprogramar un partido.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-053
+        title: Actualización deportiva automática en vivo
+        estimate: 5
+        depends_on:
+          - WAT-108
+          - WP-022
+        description: Evaluar polling compartido con cuotas reales y frecuencia acordada.
+        acceptance:
+          - Presupuesto de llamadas medido y límites respetados.
+          - Mostrar datos atrasados sin simular un reloj en vivo.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-054
+        title: Estadísticas avanzadas y rankings
+        estimate: 5
+        depends_on:
+          - WP-024
+          - WP-028
+        description: Ampliar comparaciones solo si el proveedor cubre los datos y hay
+          demanda.
+        acceptance:
+          - Documentar cálculo y cobertura.
+          - No tratar datos faltantes como cero ni comparar muestras
+            incompatibles.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-055
+        title: Eliminar cuenta y gestionar retención
+        estimate: 4
+        depends_on:
+          - WP-003
+        description: Definir política y permitir eliminar o anonimizar información
+          vinculada de forma consistente.
+        acceptance:
+          - Revocar sesión, limpiar dependencias según política acordada.
+          - Confirmación explícita y resultado verificable.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []
+      - id: WP-056
+        title: Salas privadas e invitaciones
+        estimate: 5
+        depends_on:
+          - WP-006
+        description: Extensión fuera del MVP público; requiere reglas de acceso y ciclo
+          de invitaciones.
+        acceptance:
+          - Invitación vencida y usuario externo no acceden.
+          - No filtrar mensajes ni presencia entre salas.
+        evidence: Propuesta posterior al MVP. No está implementada; algunas acciones del
+          prototipo son decorativas.
+        owner_id: null
+        status: todo
+        starts: null
+        ends: null
+        prototype:
+          - app/page.tsx
+        ticket_refs: []

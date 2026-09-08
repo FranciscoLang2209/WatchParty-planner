@@ -1,0 +1,171 @@
+# Generado por WatchParty Planner. Fuente editable; los comentarios se reemplazan al guardar.
+meta:
+  updated: 2026-09-07
+risks:
+  - id: R-01
+    title: El alcance excede las horas disponibles
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 5
+    impact: 5
+    category: schedule
+    owner_id: francisco
+    mitigation_plan: Separar Must, Should y Could; reestimar y retirar alcance cada
+      semana antes de comprometerlo.
+    contingency_plan: Reducir estadísticas avanzadas, jugadores y feed extendido;
+      proteger el recorrido social y la entrega.
+    related_feature_ids:
+      - WP-001
+      - WP-021
+      - WP-029
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-02
+    title: API-Football Free no cubre datos recientes
+    description: "La PR #29 documenta que la cuenta Free rechaza fixtures de
+      temporada 2026. Impacta la promesa de datos deportivos actuales; no impide
+      chat en tiempo real sobre datos históricos."
+    probability: 4
+    impact: 5
+    category: external
+    owner_id: tomi
+    mitigation_plan: Cerrar WAT-102 con evidencia de competición, temporada, cuota y
+      coste antes de prometer vivo.
+    contingency_plan: Demo con partidos históricos etiquetados o proveedor alternativo aprobado.
+    related_feature_ids:
+      - WAT-102
+      - WAT-108
+      - WP-022
+    status: materialized
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-03
+    title: Pérdida o duplicación de mensajes al reconectar
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 3
+    impact: 4
+    category: technical
+    owner_id: nacho
+    mitigation_plan: IDs estables, persistencia antes de confirmar, cursor de
+      recuperación y prueba de dos sesiones.
+    contingency_plan: Usar refresco explícito temporal y mostrar desconexión.
+    related_feature_ids:
+      - WP-009
+      - WP-010
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-04
+    title: Datos privados expuestos por permisos incompletos
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 3
+    impact: 5
+    category: technical
+    owner_id: nacho
+    mitigation_plan: Validar RLS/roles y acceso cruzado para perfil, historial, notas y canales.
+    contingency_plan: Bloquear release hasta corregir acceso; restringir piloto.
+    related_feature_ids:
+      - WP-003
+      - WP-033
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-05
+    title: Estado de Multica diverge de main
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 4
+    impact: 3
+    category: schedule
+    owner_id: francisco
+    mitigation_plan: Reconciliar WAT-96, WAT-112 y evidencia visual de WAT-111 sin
+      recrear trabajo.
+    contingency_plan: Mantener snapshot con discrepancias visibles y revisar cada PR.
+    related_feature_ids:
+      - WAT-96
+      - WAT-112
+      - WAT-111
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-06
+    title: Integración remota tardía
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 3
+    impact: 4
+    category: technical
+    owner_id: tomi
+    mitigation_plan: Preparar QA antes de la semana de release; verificar Auth, CORS
+      y tiempo real juntos.
+    contingency_plan: Demostración local reproducible con limitación declarada.
+    related_feature_ids:
+      - WP-036
+      - WP-039
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 4
+  - id: R-07
+    title: Ausencias o menor disponibilidad del equipo
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 3
+    impact: 4
+    category: people
+    owner_id: francisco
+    mitigation_plan: Confirmar 6 h reales por persona cada semana y mantener
+      reservas explícitas.
+    contingency_plan: Redistribuir solo tras comprobar capacidad personal; bajar alcance.
+    related_feature_ids:
+      - FIX-3
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-08
+    title: Abuso en salas públicas
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 2
+    impact: 4
+    category: scope
+    owner_id: nacho
+    mitigation_plan: Límites de mensajes, reporte y rol moderador mínimo antes de un
+      piloto público.
+    contingency_plan: Cerrar admisión y usar un grupo controlado.
+    related_feature_ids:
+      - WP-013
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 2
+  - id: R-09
+    title: La demo depende de un partido o Internet
+    description: Riesgo de planificación identificado al contrastar fuentes y
+      capacidad; no es un incidente confirmado.
+    probability: 2
+    impact: 3
+    category: external
+    owner_id: martina
+    mitigation_plan: Seed, guion y grabación de respaldo.
+    contingency_plan: Reproducir grabación y explicar el entorno medido.
+    related_feature_ids:
+      - WP-041
+    status: open
+    review_date: 2026-09-14
+    related_sprint: 5
+incidents:
+  - id: INC-001
+    title: Plan Free sin cobertura para temporada 2026
+    description: "Evidencia reportada en PR #29 (consulta del 07/09/2026): 2026
+      rechazada; temporada 2023 disponible. Pendiente decidir alcance de datos
+      de demo o proveedor/acceso alternativo. No se llamó al proveedor desde
+      este planificador."
+    status: open
+    severity: high
+    occurred_at: 2026-09-07
+    resolved_at: null
+    risk_id: R-02
+    resolution: ""
+    lessons_learned: ""

@@ -1,0 +1,103 @@
+# Generado por WatchParty Planner. Fuente editable; los comentarios se reemplazan al guardar.
+meta:
+  updated: 2026-09-07
+  tracker_user_ids: null
+project:
+  name: WatchParty
+  starts: 2026-09-07
+  deadline: 2026-11-12
+  assumptions:
+    - "Confirmado: 3 developers × 6 h/semana; entrega final 12/11/2026."
+    - Sprints 2 a 5 replanteados desde el estado actual; no transcripción exacta
+      de fechas de la captura.
+    - La última semana se prorratea por días de calendario (4/7); validar
+      distribución real de horas.
+    - Estimaciones nuevas son hipótesis de esfuerzo, no compromisos; incluyen
+      implementación y verificación.
+    - Se preservan estimaciones explícitas de Multica; null consume 3 h para
+      planificar, no inventa horas históricas.
+    - Asignaciones actuales provienen de Multica; nuevas asignaciones quedan sin
+      responsable hasta planificar la semana.
+    - MVP debe recortarse si el trabajo supera 18 h/semana. Las propuestas
+      Should y Could no son promesas.
+people:
+  - id: martina
+    name: Martina Cousido
+    role: Frontend · Multica
+    takes_tickets: true
+    weekly_points: 6
+  - id: nacho
+    name: Ignacio García
+    role: Backend / persistencia · Multica
+    takes_tickets: true
+    weekly_points: 6
+  - id: tomi
+    name: Tomi · tomassk2005
+    role: Backend / integración · Multica
+    takes_tickets: true
+    weekly_points: 6
+  - id: francisco
+    name: Francisco Lang
+    role: Project Manager · coordinación
+    takes_tickets: false
+    weekly_points: 0
+sprints:
+  - number: 1
+    name: Base existente
+    starts: 2026-08-03
+    ends: 2026-09-06
+    theme: Autenticación y catálogo temporal
+    notes: Agrupación histórica orientativa; no reconstruye fechas ni horas reales.
+  - number: 2
+    name: Cerrar las bases
+    starts: 2026-09-07
+    ends: 2026-09-20
+    theme: Proveedor, persistencia y cuenta
+    notes: "Salida: catálogo persistido validado, perfil y reglas del MVP."
+  - number: 3
+    name: La experiencia WatchParty
+    starts: 2026-09-21
+    ends: 2026-10-18
+    theme: Salas, chat, historial y calificaciones
+    notes: "Salida: recorrido social entre dos usuarios. Should se difiere si no
+      entra."
+  - number: 4
+    name: MVP listo para probar
+    starts: 2026-10-19
+    ends: 2026-11-01
+    theme: Seguridad, QA, concurrencia y despliegue
+    notes: "Salida: versión candidata accesible y aceptada."
+  - number: 5
+    name: Entrega y defensa
+    starts: 2026-11-02
+    ends: 2026-11-12
+    theme: Documentación, evidencia y demo
+    notes: "Entrega confirmada: jueves 12 de noviembre. No añadir features nuevas."
+  - number: 6
+    name: Después del MVP
+    starts: 2026-11-13
+    ends: 2026-12-31
+    theme: Evolución sin fecha comprometida
+    notes: Contenedor de opciones, no promesa de ejecución en diciembre.
+capacity:
+  scale: 1 punto = 1 hora estimada de esfuerzo. Nuevas estimaciones sujetas a
+    revisión.
+  allowed_estimates:
+    - 0.25
+    - 0.5
+    - 1
+    - 1.5
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  default_estimate: 3
+  buffer_ratio: 0
+definition_of_done:
+  - Criterios de aceptación revisados por una persona del equipo.
+  - Tipos, lint, pruebas pertinentes y build pasan con pnpm validate.
+  - Migraciones reproducibles; permisos, entradas y errores comprobados.
+  - UI usable en móvil y desktop, teclado y ambos temas cuando aplica.
+  - Sin secretos ni datos personales de prueba en el repositorio.
+  - Evidencia adjunta al ticket y PR integrada; actualizar el estado de Multica.
