@@ -1,7 +1,7 @@
 # Generado por WatchParty Planner. Fuente editable; los comentarios se reemplazan al guardar.
 meta:
   project: WatchParty
-  updated: 2026-09-08
+  updated: 2026-09-17
   real_repository: https://github.com/FranciscoLang2209/WatchParty
   real_commit: 4f32cea36de42a6d675fd6d671f4b53c5894b0f6
   reference_repository: https://github.com/Pedrodeforonda/WatchParty-App-Styled
@@ -693,14 +693,15 @@ epics:
         depends_on:
           - WAT-105
           - WAT-103
-        description: Importar una ventana acotada con bloqueo de concurrencia y
-          presupuesto de llamadas.
+        description: Entregar el flujo operativo completo para importar una ventana
+          acotada mediante una acción autenticada en la app, endpoint con bloqueo de concurrencia,
+          presupuesto de llamadas y resultado visible sin exponer claves.
         acceptance:
-          - Repetir la importación no duplica fixtures.
-          - Salir con causa legible ante cuota insuficiente; no exponer claves.
+          - Una persona autenticada puede iniciar una importación acotada y ver el resumen o una causa legible de fallo/cuota; las claves nunca llegan al navegador.
+          - Repetir la importación no duplica fixtures y el catálogo de la app refleja los datos persistidos.
         evidence: "Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea;
           puede existir en rama/PR."
-        owner_id: tomi
+        owner_id: nacho
         status: backlog
         starts: 2026-09-14
         ends: 2026-09-20
@@ -714,11 +715,12 @@ epics:
         estimate: null
         depends_on:
           - WAT-107
-        description: Ejecutar una sincronización mínima controlada y registrar el
-          runbook reproducible.
+        description: Validar el recorrido completo de datos deportivos importados con
+          catálogo visible desde la app a través de su API, sincronización mínima
+          controlada y runbook reproducible.
         acceptance:
-          - Evidenciar registros persistidos y consumo de cuota.
-          - No reconsultar el proveedor desde cada navegador.
+          - Con una sincronización mínima, la app muestra registros persistidos tras reiniciar y se evidencia el consumo de cuota.
+          - El navegador consulta solo la API propia; el runbook deja el procedimiento y los resultados reproducibles.
         evidence: "Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea;
           puede existir en rama/PR."
         owner_id: tomi
@@ -736,14 +738,15 @@ epics:
         depends_on:
           - WAT-106
           - WAT-107
-        description: Verificar migración, permisos, importación y lectura autenticada en
-          entorno local desechable.
+        description: Verificar el recorrido vertical del catálogo deportivo en un
+          entorno local desechable con UI autenticada, lectura por API, migración,
+          permisos e importación persistente.
         acceptance:
-          - Pruebas con usuario autorizado y no autorizado.
-          - Datos conservados después del reinicio y errores HTTP estables.
+          - Una sesión autorizada ve los datos importados en la app y una no autorizada recibe el rechazo esperado.
+          - Datos conservados después del reinicio y errores HTTP estables, comprobados por prueba automatizada o smoke reproducible.
         evidence: "Multica observado 07/09/2026: In Progress. No encontrado en main
           4f32cea; puede existir en rama/PR."
-        owner_id: nacho
+        owner_id: martina
         status: in_progress
         starts: 2026-09-14
         ends: 2026-09-20
@@ -852,15 +855,15 @@ epics:
         depends_on:
           - WAT-89
           - WAT-103
-        description: Como usuario quiero guardar nombre visible y biografía corta para
-          identificarme en la comunidad.
+        description: Como usuario quiero editar desde la app mi nombre visible y
+          biografía corta, guardarlos por la API en mi perfil y recuperarlos al
+          volver a iniciar sesión.
         acceptance:
-          - Perfil ligado al auth.uid con permisos de propietario.
-          - Editar, recargar y abrir sesión nuevamente conserva los campos; otro
-            usuario no puede modificarlos.
+          - El formulario valida y guarda por la API un perfil ligado al auth.uid con permisos de propietario.
+          - Editar, recargar y abrir sesión nuevamente conserva los campos; otro usuario no puede modificarlos ni por UI ni por API.
         evidence: Propuesta derivada del mockup y del alcance preliminar; no
           implementada en main.
-        owner_id: null
+        owner_id: martina
         status: todo
         starts: 2026-09-14
         ends: 2026-09-20
@@ -873,14 +876,15 @@ epics:
         depends_on:
           - WP-003
           - WAT-106
-        description: Como usuario quiero seleccionar un equipo del catálogo y recuperar
-          mi preferencia al iniciar sesión.
+        description: Como usuario quiero seleccionar desde mi perfil un equipo del
+          catálogo, persistir la preferencia por la API y recuperarla al iniciar
+          sesión.
         acceptance:
-          - Permite elegir, cambiar y quitar el equipo favorito.
-          - La Home contempla usuario sin favorito y equipo sin próximo partido.
+          - La interfaz permite elegir, cambiar y quitar el equipo favorito; la API solo modifica la preferencia del usuario autenticado.
+          - La Home recupera la preferencia persistida y contempla usuario sin favorito y equipo sin próximo partido.
         evidence: Propuesta derivada del mockup y del alcance preliminar; no
           implementada en main.
-        owner_id: null
+        owner_id: nacho
         status: todo
         starts: 2026-09-14
         ends: 2026-09-20
@@ -1741,13 +1745,14 @@ epics:
         title: Resolver defectos y absorber arrastre
         estimate: 3
         depends_on: []
-        description: Reserva explícita que se descompone en defectos reales al aparecer.
-          No representa funcionalidad terminada.
+        description: Reserva explícita para corregir defectos reales en el flujo
+          vertical comprometido esta semana (UI, API o datos). No representa
+          funcionalidad terminada.
         acceptance:
-          - Consumir solo contra bugs o pendientes identificados.
+          - Consumir solo contra bugs o pendientes identificados y cerrar su causa en la capa compartida, con verificación de punta a punta cuando aplique.
           - Lo no utilizado se libera; no adelantar Could hasta cerrar los Must.
         evidence: Reserva propuesta, no incidencia observada.
-        owner_id: null
+        owner_id: tomi
         status: todo
         starts: 2026-09-14
         ends: 2026-09-20

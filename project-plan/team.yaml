@@ -1,6 +1,6 @@
 # Generado por WatchParty Planner. Fuente editable; los comentarios se reemplazan al guardar.
 meta:
-  updated: 2026-09-07
+  updated: 2026-09-17
   tracker_user_ids: null
 project:
   name: WatchParty
@@ -8,6 +8,7 @@ project:
   deadline: 2026-11-12
   assumptions:
     - "Confirmado: 3 developers × 6 h/semana; entrega final 12/11/2026."
+    - "Desde la semana del 14/09, Martina, Ignacio y Tomi trabajan como full stack: cada ticket comprometido entrega el flujo vertical que corresponda."
     - Sprints 2 a 5 replanteados desde el estado actual; no transcripción exacta
       de fechas de la captura.
     - La última semana se prorratea por días de calendario (4/7); validar
@@ -23,17 +24,17 @@ project:
 people:
   - id: martina
     name: Martina Cousido
-    role: Frontend · Multica
+    role: Full stack · Multica
     takes_tickets: true
     weekly_points: 6
   - id: nacho
     name: Ignacio García
-    role: Backend / persistencia · Multica
+    role: Full stack · Multica
     takes_tickets: true
     weekly_points: 6
   - id: tomi
     name: Tomi · tomassk2005
-    role: Backend / integración · Multica
+    role: Full stack · Multica
     takes_tickets: true
     weekly_points: 6
   - id: francisco
@@ -95,6 +96,7 @@ capacity:
   default_estimate: 3
   buffer_ratio: 0
 definition_of_done:
+  - Cada ticket comprometido entrega el flujo vertical aplicable (UI, API y datos), sin dejar una capa para otro ticket.
   - Criterios de aceptación revisados por una persona del equipo.
   - Tipos, lint, pruebas pertinentes y build pasan con pnpm validate.
   - Migraciones reproducibles; permisos, entradas y errores comprobados.

@@ -686,16 +686,16 @@ Componer la API con el catálogo persistente manteniendo los consumidores del pu
 - Alcance: MUST
 - Estimación: sin estimar (3 h para planificación, 0 para progreso)
 - Fechas propuestas: 2026-09-14 → 2026-09-20
-- Responsable: Tomi · tomassk2005
+- Responsable: Ignacio García
 - Dependencias: WAT-105, WAT-103
 - Tickets externos: WAT-107
 
-Importar una ventana acotada con bloqueo de concurrencia y presupuesto de llamadas.
+Entregar el flujo operativo completo para importar una ventana acotada mediante una acción autenticada en la app, endpoint con bloqueo de concurrencia, presupuesto de llamadas y resultado visible sin exponer claves.
 
 **Criterios de aceptación**
 
-- Repetir la importación no duplica fixtures.
-- Salir con causa legible ante cuota insuficiente; no exponer claves.
+- Una persona autenticada puede iniciar una importación acotada y ver el resumen o una causa legible de fallo/cuota; las claves nunca llegan al navegador.
+- Repetir la importación no duplica fixtures y el catálogo de la app refleja los datos persistidos.
 
 **Evidencia:** Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea; puede existir en rama/PR.
 
@@ -711,12 +711,12 @@ Importar una ventana acotada con bloqueo de concurrencia y presupuesto de llamad
 - Dependencias: WAT-107
 - Tickets externos: WAT-108
 
-Ejecutar una sincronización mínima controlada y registrar el runbook reproducible.
+Validar el recorrido completo de datos deportivos importados con catálogo visible desde la app a través de su API, sincronización mínima controlada y runbook reproducible.
 
 **Criterios de aceptación**
 
-- Evidenciar registros persistidos y consumo de cuota.
-- No reconsultar el proveedor desde cada navegador.
+- Con una sincronización mínima, la app muestra registros persistidos tras reiniciar y se evidencia el consumo de cuota.
+- El navegador consulta solo la API propia; el runbook deja el procedimiento y los resultados reproducibles.
 
 **Evidencia:** Multica observado 07/09/2026: Todo. No encontrado en main 4f32cea; puede existir en rama/PR.
 
@@ -728,16 +728,16 @@ Ejecutar una sincronización mínima controlada y registrar el runbook reproduci
 - Alcance: MUST
 - Estimación: 1 h
 - Fechas propuestas: 2026-09-14 → 2026-09-20
-- Responsable: Ignacio García
+- Responsable: Martina Cousido
 - Dependencias: WAT-106, WAT-107
 - Tickets externos: WAT-109
 
-Verificar migración, permisos, importación y lectura autenticada en entorno local desechable.
+Verificar el recorrido vertical del catálogo deportivo en un entorno local desechable con UI autenticada, lectura por API, migración, permisos e importación persistente.
 
 **Criterios de aceptación**
 
-- Pruebas con usuario autorizado y no autorizado.
-- Datos conservados después del reinicio y errores HTTP estables.
+- Una sesión autorizada ve los datos importados en la app y una no autorizada recibe el rechazo esperado.
+- Datos conservados después del reinicio y errores HTTP estables, comprobados por prueba automatizada o smoke reproducible.
 
 **Evidencia:** Multica observado 07/09/2026: In Progress. No encontrado en main 4f32cea; puede existir en rama/PR.
 
@@ -838,16 +838,16 @@ El envío de email existe; agregar callback de recuperación y formulario para g
 - Alcance: MUST
 - Estimación: 4 h
 - Fechas propuestas: 2026-09-14 → 2026-09-20
-- Responsable: sin asignar
+- Responsable: Martina Cousido
 - Dependencias: WAT-89, WAT-103
 - Tickets externos: ninguno
 
-Como usuario quiero guardar nombre visible y biografía corta para identificarme en la comunidad.
+Como usuario quiero editar desde la app mi nombre visible y biografía corta, guardarlos por la API en mi perfil y recuperarlos al volver a iniciar sesión.
 
 **Criterios de aceptación**
 
-- Perfil ligado al auth.uid con permisos de propietario.
-- Editar, recargar y abrir sesión nuevamente conserva los campos; otro usuario no puede modificarlos.
+- El formulario valida y guarda por la API un perfil ligado al auth.uid con permisos de propietario.
+- Editar, recargar y abrir sesión nuevamente conserva los campos; otro usuario no puede modificarlos ni por UI ni por API.
 
 **Evidencia:** Propuesta derivada del mockup y del alcance preliminar; no implementada en main.
 
@@ -859,16 +859,16 @@ Como usuario quiero guardar nombre visible y biografía corta para identificarme
 - Alcance: MUST
 - Estimación: 3 h
 - Fechas propuestas: 2026-09-14 → 2026-09-20
-- Responsable: sin asignar
+- Responsable: Ignacio García
 - Dependencias: WP-003, WAT-106
 - Tickets externos: ninguno
 
-Como usuario quiero seleccionar un equipo del catálogo y recuperar mi preferencia al iniciar sesión.
+Como usuario quiero seleccionar desde mi perfil un equipo del catálogo, persistir la preferencia por la API y recuperarla al iniciar sesión.
 
 **Criterios de aceptación**
 
-- Permite elegir, cambiar y quitar el equipo favorito.
-- La Home contempla usuario sin favorito y equipo sin próximo partido.
+- La interfaz permite elegir, cambiar y quitar el equipo favorito; la API solo modifica la preferencia del usuario autenticado.
+- La Home recupera la preferencia persistida y contempla usuario sin favorito y equipo sin próximo partido.
 
 **Evidencia:** Propuesta derivada del mockup y del alcance preliminar; no implementada en main.
 
@@ -1727,15 +1727,15 @@ Capacidad explícita para bugs y arrastre; no duplicar con un porcentaje de buff
 - Alcance: MUST
 - Estimación: 3 h
 - Fechas propuestas: 2026-09-14 → 2026-09-20
-- Responsable: sin asignar
+- Responsable: Tomi · tomassk2005
 - Dependencias: ninguna
 - Tickets externos: ninguno
 
-Reserva explícita que se descompone en defectos reales al aparecer. No representa funcionalidad terminada.
+Reserva explícita para corregir defectos reales en el flujo vertical comprometido esta semana (UI, API o datos). No representa funcionalidad terminada.
 
 **Criterios de aceptación**
 
-- Consumir solo contra bugs o pendientes identificados.
+- Consumir solo contra bugs o pendientes identificados y cerrar su causa en la capa compartida, con verificación de punta a punta cuando aplique.
 - Lo no utilizado se libera; no adelantar Could hasta cerrar los Must.
 
 **Evidencia:** Reserva propuesta, no incidencia observada.
