@@ -1,5 +1,9 @@
 # WatchParty · plan de entrega local
 
+## Cierre vigente · 5–12/11/2026
+
+El [plan semanal aprobado](project-plan/weeks/2026-11-05/plan.md) registra tres reservas de hasta 6 h, divididas en nueve tickets de 2 h, sin trabajo ficticio ni arrastre de períodos anteriores. Usar la [plantilla de defectos](project-plan/weeks/2026-11-05/defect-template.md) para los reportes reales de QA. El plan está publicado también en la descripción del proyecto WatchParty en Multica. Los YAML y las exportaciones siguientes conservan el snapshot histórico; no son un tablero sincronizado de esta última semana.
+
 Tablero de planificación en español basado en el repositorio real, el prototipo visual, Multica y las restricciones confirmadas por el usuario. Incluye backlog editable, cronograma, planificación semanal, equipo, sprints, riesgos e incidentes.
 
 ## Abrir
